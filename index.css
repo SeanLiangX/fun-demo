@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+#james {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20vh;
+  gap: 8px;
+}
+
+.letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.char {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 900;
+  border-bottom: 4px solid transparent;
+
+  background-image: url("annie_yu_linkedin.jpeg");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.letter.current .char {
+  border-bottom-color: #333;
+}
+
+.letter.correct .char {
+  -webkit-text-stroke: 2px green;
+}
+
+.letter.wrong .char {
+  -webkit-text-stroke: 2px red;
+}
+
+.letter img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 8px;
+}
